@@ -1,0 +1,17 @@
+package tests.SignInTest;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import tests.BaseTest;
+
+
+public class SignUpTest extends BaseTest{
+
+    @Test
+    public void signUp(){
+
+        Assert.assertTrue(signInPage.isLogoDisplayed(), "Logo is not displayed");
+        Assert.assertTrue(signInPage.isemailFieldDisplayed(), "Email is not displayed");
+
+    }
+}
