@@ -11,7 +11,11 @@ public class SignUpTest extends BaseTest{
     public void signUp(){
 
         Assert.assertTrue(signInPage.isLogoDisplayed(), "Logo is not displayed");
-        Assert.assertTrue(signInPage.isemailFieldDisplayed(), "Email is not displayed");
+        Assert.assertTrue(signInPage.isEmailFieldDisplayed(), "Email is not displayed");
+        Assert.assertTrue(signInPage.isSignInButtonDisplayed(), "Sign in is not displayed");
+        Assert.assertTrue(signInPage.isSkipSignInButtonDisplayed(), "Skip Sign in is not displayed");
+        signInPage.clickSignInButton();
+
 
     }
 }

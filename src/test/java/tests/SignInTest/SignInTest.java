@@ -7,6 +7,12 @@ import tests.BaseTest;
 
 public class SignInTest extends BaseTest {
 
+    private final String email;
+
+    public SignInTest(String email) {
+        this.email = email;
+    }
+
     @Test
     public void checkIfLogoIsDisplayed(){
         Log.info("Verify if Logo is displayed");
