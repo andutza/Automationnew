@@ -1,11 +1,15 @@
 package tests.SignInTest;
 
-import jdk.internal.org.jline.utils.Log;
+
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import tests.BaseTest;
 
 public class SignInTest extends BaseTest {
+    private static final Logger LOG = LoggerFactory.getLogger(SignInTest.class);
 
     private final String email;
 
@@ -14,15 +18,16 @@ public class SignInTest extends BaseTest {
     }
 
     @Test
-    public void checkIfLogoIsDisplayed(){
-        Log.info("Verify if Logo is displayed");
+    public void checkIfLogoIsDisplayed() {
+        String email = "grupa3@automation.com";
+        LOG.info("Verify if Logo is displayed");
         Assert.assertTrue(signInPage.isLogoDisplayed(), "Logo is not displayed");
 
-        Log.info("Complete the email field");
+        LOG.info("Complete the email field");
         Assert.assertTrue(signInPage.isEmailFieldDisplayed(), "Email field is not displayed");
         signInPage.typeInEmailField(email);
 
-        Log.info("Click the Next button");
+        LOG.info("Click the Next button");
         signInPage.clickNextButton();
     }
 }

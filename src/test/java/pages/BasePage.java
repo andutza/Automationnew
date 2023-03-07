@@ -28,6 +28,19 @@ public class BasePage {
         driver.quit();
     }
 
+    public static String returnBaseurl(){
+        return "https://demo.automationtesting.in/Index.html";
+
+    }
+
+    public static String getBaseUrl(){
+        String baseUrl = returnBaseurl();
+        if (baseUrl != null){
+            return baseUrl.replace("Index.html", "");
+        }
+        return baseUrl;
+    }
+
 
 }
 
