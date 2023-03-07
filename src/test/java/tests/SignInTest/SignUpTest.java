@@ -36,7 +36,7 @@ public class SignUpTest extends BaseTest {
         SignInPage.clickEnterbutton();
 
         LOG.info("Verifying if error message is displayed");
-        Assert.assertTrue(signInPage.isErrorMessageDisplayed(), "Error message is not displayed)";
+        Assert.assertTrue(signInPage.isErrorMessageDisplayed(), "Error message is not displayed");
 
 
 
