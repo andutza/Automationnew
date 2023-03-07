@@ -38,7 +38,7 @@ public class SignInPage extends BasePage {
     private By enterButton = By.id("enterbtn");
 
 
-    public void clickEnterbutton() {
+    public static void clickEnterbutton() {
         LOG.info("Click the 'Enter' Button");
         driver.findElement(enterButton).click();
 
