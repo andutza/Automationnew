@@ -38,7 +38,7 @@ public class SignInPage extends BasePage {
     private By enterButton = By.id("enterbtn");
 
 
-    public static void clickEnterbutton() {
+    public void clickEnterbutton() {
         LOG.info("Click the 'Enter' Button");
         driver.findElement(enterButton).click();
 
@@ -112,6 +112,11 @@ public class SignInPage extends BasePage {
     public boolean isErrorMessageDisplayed() {
         LOG.info("Verifying if error message is displayed");
         return driver.findElement(errorMsg).isDisplayed();
+    }
+
+    public void clickBack(){
+        LOG.info("Clicking back in browser");
+        driver.navigate().back();
     }
 
 

@@ -1,12 +1,10 @@
 package tests.SignInTest;
 
 
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.SignInPage.SignInPage;
 import tests.BaseTest;
 
 import static pages.BasePage.getBaseUrl;
@@ -22,6 +20,7 @@ public class SignUpTest extends BaseTest {
         String password = "12345";
 
         LOG.info("Navigate to Sign Up Page");
+        LOG.info("Verify UI elements");
         Assert.assertTrue(signInPage.isLogoDisplayed(), "Logo is not displayed");
         Assert.assertTrue(signInPage.isEmailFieldDisplayed(), "Email is not displayed");
         Assert.assertTrue(signInPage.isSignInButtonDisplayed(), "Sign in is not displayed");
@@ -33,11 +32,16 @@ public class SignUpTest extends BaseTest {
         signInPage.typeInPasswordField(password);
 
         LOG.info("Click 'Enter' button");
-        SignInPage.clickEnterbutton();
+        signInPage.clickEnterbutton();
 
         LOG.info("Verifying if error message is displayed");
         Assert.assertTrue(signInPage.isErrorMessageDisplayed(), "Error message is not displayed");
 
+        LOG.info("Navigate back");
+        signInPage.clickBack();
+
+        LOG.info("Click Skip SignIn button");
+        signInPage.clickSkipSignInButton();
 
 
     }
